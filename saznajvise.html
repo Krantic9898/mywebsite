@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    .im1{
+    margin-left:10%;
+    
+    }
+        body{
+            
+    background-color:	 #00264d;
+        }
+        .slider {
+            width: 70%; /* Promenjeno */
+            margin: 0 auto; /* Centrirano na ekranu */
+            overflow: hidden;
+        }
+        
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .slide {
+            min-width: 100%;
+        }
+        
+        .slide img {
+            max-width: 100%; /* Slike iste veličine */
+            height: auto; /* Održava proporcije */
+        }
+    
+    </style>
+<body>
+    <img style="width: 70px; float: left; margin-right: 20px;" src="https://i.pinimg.com/564x/ef/b7/75/efb775f3978d333fbe8d0b13d5e87479.jpg">
+    <h1 style="color: white;">MyFreelanceJob</h1><br>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+
+        <div class="container-fluid">
+
+            
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="pocetna.html">Početna</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="saznajvise.html">Saznaj više</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="meni.html">Meni</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="kontakt.html">Kontakt</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav><br><br><br>
+<p style="color: white;">Dobrodošli na moj web sajt! Ovde se možete informisati o širokom spektru usluga koje pružam, usmerenih ka unapređenju vašeg digitalnog prisustva. Bez obzira da li je reč o web dizajnu koji će osigurati da vaša online platforma bude intuitivna i estetski privlačna, razvoju aplikacija koje će unaprediti funkcionalnost i korisničko iskustvo, ili pisanju sadržaja koji će angažovati i inspirisati vašu ciljnu publiku, moja misija je jednostavna - da vam pružim izvanredne digitalne usluge koje će vaš brend istaknuti u moru konkurencije.
+
+    Moj pristup je usredsređen na personalizaciju i pažnju prema detaljima. Verujem da svaki projekat ima svoju jedinstvenu priču i potrebe, te se trudim da prilagodim svoje veštine i resurse kako bih vam pomogao da ostvarite svoje specifične ciljeve. Svaki korak u procesu razvoja je pažljivo planiran i izveden s ciljem postizanja optimalnih rezultata. Kroz kombinaciju kreativnosti i tehničke stručnosti, nastojim da vaša vizija postane stvarnost.
+    
+    Sa mnom, dobijate partnera koji je posvećen vašem uspehu. Vaše zadovoljstvo i postignuti rezultati su moj prioritet, i trudiću se da premašim vaša očekivanja u svakom trenutku. Bez obzira da li je u pitanju redizajn vaše web stranice radi poboljšanja korisničkog iskustva, razvoj aplikacije po meri koja će odgovarati vašim specifičnim zahtevima, ili kreiranje relevantnog i privlačnog sadržaja koji će angažovati vašu publiku, ja sam tu da vam pružim podršku i stručnost.
+    
+    Hvala vam što ste posetili moju web stranicu. Radujem se što ću imati priliku da sarađujem s vama i zajedno stvorimo nešto posebno što će istaknuti vaš brend na digitalnom tržištu. Vaš uspeh je i moj uspeh, i jedva čekam da započnemo ovaj put ka ostvarenju vaših ciljeva i vizija.
+    
+    
+    
+    
+    
+    
+    </p><br>
+    <div class="slider" style="margin-left:27%;">
+        <div class="slides">
+          <div class="slide">
+            <img style="width:700px" src="https://devmountain.com/wp-content/uploads/2022/04/markus-spiske-666904-unsplash-1-scaled.jpg" alt="Slika 1">
+          </div>
+          <div class="slide">
+            <img style="width:700px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReGzCdCArIx8XAaVGDF_e-jfnUIoE0cPlzqGxuUFirlU80fL8WvMcIRKRiRR4MsIM9hDs&usqp=CAU" alt="Slika 2">
+          </div>
+          <div class="slide">
+            <img style="width:700px" src="https://phppot.com/wp-content/uploads/2022/11/phpmyadmin-create-database.jpg" alt="Slika 2">
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelector('.slides');
+        const slideWidth = document.querySelector('.slide').clientWidth;
+      
+        let counter = 0;
+      
+        function nextSlide() {
+          if (counter >= slides.children.length - 1) return;
+          counter++;
+          slides.style.transform = `translateX(-${slideWidth * counter}px)`;
+        }
+      
+        function prevSlide() {
+          if (counter <= 0) return;
+          counter--;
+          slides.style.transform = `translateX(-${slideWidth * counter}px)`;
+        }
+      
+        setInterval(nextSlide, 3000); // Promjena slike svakih 3 sekunde
+      </script>
+      
+</body>
+</html>
